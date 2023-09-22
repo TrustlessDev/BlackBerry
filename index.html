@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>Gray Worker</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/bootstrap-icons.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="manifest" href="_manifest.json">
+<meta id="theme-check" name="theme-color" content="#FFFFFF">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png"></head>
+
+<body class="theme-light">
+
+<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+
+<div id="page">
+
+    <!-- Header -->
+    <div class="header-bar header-fixed header-app header-bar-detached">
+        <a data-bs-toggle="offcanvas" data-bs-target="#menu-main" href="#"><i class="bi bi-plug color-theme"></i></a>
+        <a href="#" class="header-title color-theme">D8 Security</a>
+		<a href="#" data-bs-toggle="offcanvas" data-bs-target="#menu-bell"><i class="font-14 bi bi-cash-coin"></i></a>
+        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#menu-bell"><em class="badge bg-highlight ms-1">3</em><i class="font-14 bi bi-bell-fill"></i></a>
+    </div>
+
+	<!-- Footer Bar-->
+    <div id="footer-bar" class="footer-bar footer-bar-detached">
+		<a href="index-pages.html"><i class="bi bi-sim-fill font-15"></i><span>eSIM</span></a>
+        <a href="index-components.html"><i class="bi bi-file-lock2-fill font-17"></i><span>UEM</span></a>
+        <a href="index.html" class="active-nav"><i class="bi bi-house-fill font-16"></i><span>Home</span></a>
+        <a href="index-media.html"><i class="bi bi-pc-display font-16"></i><span>PC</span></a>
+        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#menu-main"><i class="bi bi-list"></i><span>Menu</span></a>
+    </div>
+
+	<!-- Main Sidebar-->
+	<div id="menu-main" data-menu-active="nav-homes" data-menu-load="menu-main.html"
+		style="width:280px;" class="offcanvas offcanvas-start offcanvas-detached rounded-m">
+	</div>
+
+	<!-- Menu Highlights-->
+	<div id="menu-color" data-menu-load="menu-highlights.html"
+		style="height:340px" class="offcanvas offcanvas-bottom offcanvas-detached rounded-m">
+	</div>
+
+	<!-- Main Bell-->
+	<div id="menu-bell"	data-menu-load="menu-bell.html"
+		style="height:400px;" class="offcanvas offcanvas-top offcanvas-detached rounded-m">
+	</div>
+
+    <!-- Your Page Content Goes Here-->
+    <div class="page-content header-clear-medium">
+
+		<div class="splide single-slider slider-no-dots slider-no-arrows slider-boxed text-center mt-n2" id="single-slider-3">
+			<div class="splide__track">
+				<div class="splide__list">
+					<div class="splide__slide">
+						<div class="card card-style mx-0 shadow-card shadow-card-m bg-esim" data-card-height="230">
+							<div class="card-bottom pb-3 px-3">
+								<h3 class="color-white mb-1">Ultra SVPN eSIM</h3>
+								<p class="color-white opacity-80 mb-0 mt-n1 font-14">加密無痕eSIM網路方案</p>
+							</div>
+							<div class="card-overlay bg-gradient-fade"></div>
+						</div>
+					</div>
+					<div class="splide__slide">
+						<div class="card card-style mx-0 shadow-card shadow-card-m bg-mdm" data-card-height="230">
+							<div class="card-bottom pb-3 px-3">
+								<h3 class="color-white mb-1">iOS UEM 無痕套組</h3>
+								<p class="color-white opacity-80 mb-0 mt-n1 font-14">iOS 頂級駭客安全設置、遠端重置</p>
+							</div>
+							<div class="card-overlay bg-gradient-fade"></div>
+						</div>
+					</div>
+					<div class="splide__slide">
+						<div class="card card-style mx-0 shadow-card shadow-card-m bg-cloud-windows" data-card-height="230">
+							<div class="card-bottom pb-3 px-3">
+								<h3 class="color-white mb-0">SVPN虛擬匿蹤作業機</h3>
+								<p class="color-white opacity-80 mb-0 mt-n1">一鍵啟動、清除，無痕 Windows 匿蹤主機</p>
+							</div>
+							<div class="card-overlay bg-gradient-fade"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="card card-style">
+			<div class="card-body text-center">
+				<h5 class="mb-n1 font-12 color-highlight font-700 text-uppercase pt-1">安全隱私解決方案</h5>
+				<h2>無痕匿蹤工作套組</h2>
+				<p class="mb-3">
+					End-To-End 完整安全隱私解決方案，為您的工作環境提供最高安全保障。
+				</p>
+				<div class="row mb-n3 pt-4">
+					<div class="col-6">
+						<i class="bi bi-lightning-charge color-yellow-dark font-50 d-block pb-2"></i>
+						<h5 class="pt-2">匿蹤行動網路</h5>
+						<p>
+							SVP eSIM網路方案，從購買到使用，全程加密無痕。
+						</p>
+					</div>
+					<div class="col-6">
+						<i class="bi bi-windows color-red-light font-50 d-block pb-2"></i>
+						<h5 class="pt-2">SVPN匿蹤作業機</h5>
+						<p>
+							遠端一鍵啟動、清除，內建SVPN多國節點跳躍匿蹤主機。
+						</p>
+					</div>
+					<div class="col-6">
+						<i class="bi bi-eraser color-gray-dark font-50 d-block pb-2"></i>
+						<h5 class="pt-2">UEM安全設置</h5>
+						<p>
+							封鎖所有可能留下足跡的功能，讓您的iPhone完全無痕。
+						</p>
+					</div>
+					<div class="col-6">
+						<i class="bi bi-shield-lock color-green-light font-50 d-block pb-2"></i>
+						<h5 class="pt-2">多模態清除模式</h5>
+						<p>
+							多樣條件設置，讓您的iPhone、匿蹤主機在不同情況下，自動清除重置。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card card-style bg-qa text-center shadow-card shadow-card-l" data-card-height="340">
+			<div class="card-center">
+				<h1 class="color-white mb-0">安全隱私一條龍服務</h1>
+				<p class="color-white opacity-60 mb-2">使用USDT付款，免註冊，不留痕</p>
+				<p class="text-center color-yellow-dark py-2 mb-2">
+					<i class="bi bi-star-fill color-yellow-light font-20"></i>
+					<i class="bi bi-star-fill color-yellow-light font-24 px-1"></i>
+					<i class="bi bi-star-fill color-yellow-light font-28 px-1"></i>
+					<i class="bi bi-star-fill color-yellow-light font-24 px-1"></i>
+					<i class="bi bi-star-fill color-yellow-light font-20"></i>
+				</p>
+				<div class="splide single-slider slider-no-arrows slider-no-dots" id="single-slider-quotes">
+					<div class="splide__track">
+						<div class="splide__list">
+							<div class="splide__slide">
+								<p class="font-16 font-400 color-white line-height-xl mx-4 mb-0">
+									市面上從未出現如此完整的解決方案，自動化購買流程，毋需留下購買通聯紀錄。所有連線透過SVPN eSIM，工作環境從此安全無痕。
+									<br>
+									<a href="#" class="pt-4 color-highlight font-13 mb-0">職業黑帽駭客 zkYacht</a>
+								</p>
+							</div>
+							<div class="splide__slide">
+								<p class="font-16 font-400 color-white line-height-xl mx-4 mb-0">
+									USDT付款一鍵啟用匿蹤主機，MDM安全設置保障安全滴水不漏，工作完成後一鍵刪除，從此不再需要砸電腦、銷毀手機，節省大量成本。
+									<br>
+									<a href="#" class="pt-4 color-highlight font-13 mb-0">職業黑帽駭客 0xGov</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-overlay bg-black opacity-70"></div>
+		</div>
+
+		<div class="card card-style">
+			<div class="content px-2 text-center">
+				<h5 class="mb-n1 font-12 color-highlight font-700 text-uppercase">我們是誰，為什麼如此有自信？</h5>
+				<h2>頂尖安全技術團隊</h2>
+				<p class="mb-3">
+					所有工程技術人員來自全球頂尖資安公司，為您提供最高安全保障。
+				</p>
+				<div class="row text-center row-cols-3 mb-n1">
+					<a class="col p-1" href="https://www.trendmicro.com/" target="_blank" title="Trend Micro">
+						<img src="images/pictures/trend.png" data-src="images/pictures/trend.png" class="preload-img img-fluid rounded-m" alt="img">
+					</a>
+					<a class="col p-1" href="https://www.chtsecurity.com/service/m706" target="_blank" title="中華資安國際">
+						<img src="images/pictures/cht.png" data-src="images/pictures/cht.png" class="preload-img img-fluid rounded-m" alt="img">
+					</a>
+					<a class="col p-1" href="https://www.cisco.com/" target="_blank" title="CISCO">
+						<img src="images/pictures/cisco.png" data-src="images/pictures/cisco.png" class="preload-img img-fluid rounded-m" alt="img">
+					</a>
+					<a class="col p-1" href="https://hitcon.org/" target="_blank" title="HITCON">
+						<img src="images/pictures/hitcon.png" data-src="images/pictures/hitcon.png" class="preload-img img-fluid rounded-m" alt="img">
+					</a>
+					<a class="col p-1" href="https://devco.re/" target="_blank" title="DevCore">
+						<img src="images/pictures/devcore.png" data-src="images/pictures/devcore.png" class="preload-img img-fluid rounded-m" alt="img">
+					</a>
+					<a class="col p-1" href="https://cycraft.com/" target="_blank" title="奧義智慧科技">
+						<img src="images/pictures/cycraft.png" data-src="images/pictures/cycraft.png" class="preload-img img-fluid rounded-m" alt="img">
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="card card-style py-3">
+			<div class="content px-2 text-center">
+				<h5 class="mb-n1 font-12 color-highlight font-700 text-uppercase">是時候提升您的工作安全層級了</h5>
+				<h2>終極安全解決方案</h2>
+				<p class="mb-3">
+					不僅安全層級大幅提升、節省大量硬體銷毀成本，讓您的工作團隊安全無痕。
+				</p>
+				<a href="https://1.envato.market/2ryjKA" target="_blank" class="default-link btn btn-m rounded-s gradient-highlight shadow-bg shadow-bg-s px-5 mb-0 mt-2">現在取得您的D8帳戶</a>
+			</div>
+		</div>
+
+    </div>
+	<!-- End of Page Content-->
+</div>
+<!--End of Page ID-->
+
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/custom.js"></script>
+</body>
