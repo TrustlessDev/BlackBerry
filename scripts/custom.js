@@ -177,12 +177,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	            const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
 	            const isNoPreference = window.matchMedia("(prefers-color-scheme: no-preference)").matches
 	            window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && activateDarkMode())
-	            window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
+	            //window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && activateLightMode())
 	            if(isDarkMode) activateDarkMode();
-	            if(isLightMode) activateLightMode();
+	            //if(isLightMode) activateLightMode();
 	        }
 
 	        //Activating Dark Mode
+            /*
 	        var darkModeSwitch = document.querySelectorAll('[data-toggle-theme]')
 	        darkModeSwitch.forEach(el => el.addEventListener('click',e =>{
 	            if(document.body.className == "theme-light"){ removeTransitions(); activateDarkMode();}
@@ -201,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	            document.body.classList.add('detect-theme')
 	            setTimeout(function(){setColorScheme();},50)
 	        }))
-
+            */
 	        function removeTransitions(){var falseTransitions = document.querySelectorAll('.btn, .header, #footer-bar, .menu-box, .menu-active'); for(let i = 0; i < falseTransitions.length; i++) {falseTransitions[i].style.transition = "all 0s ease";}}
 	        function addTransitions(){var trueTransitions = document.querySelectorAll('.btn, .header, #footer-bar, .menu-box, .menu-active'); for(let i = 0; i < trueTransitions.length; i++) {trueTransitions[i].style.transition = "";}}
 		}
