@@ -35,7 +35,12 @@
                             <p style="font-size:18px;margin-top:8px;">Click 「Activate eSIM」 to activate your eSIM.</p>
                         </div>
                         <form class="activateform" id="uscc-ctn" method="post" style="display: flex;flex-direction: column;">
-                            <div class="g-recaptcha" data-sitekey="您的站点密钥"></div>
+                            <button class="g-recaptcha"
+                                data-sitekey="6LdZSgspAAAAABfpf6FnXgbNDo3bRkM6BGCrxLq-"
+                                data-callback='onSubmit'
+                                data-action='submit'>
+                            Submit
+                            </button>
                             <label style="font-weight:300;">Email address</label>
                             <input type="email" id="email-input" placeholder="Enter your email address" class="emailField">
                             <div id="email-error" style="display: none; color: red;">Invalid email address</div>
