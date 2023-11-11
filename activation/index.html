@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link href="css/activation.css" rel="stylesheet">
-        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdZSgspAAAAABfpf6FnXgbNDo3bRkM6BGCrxLq-" async defer></script>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdZSgspAAAAAPL9z0JAhGMNXtjIzGgL6Rm1xS2q" async defer></script>
         <script src="js/activation.js"></script>
         <script>
             function onClick(e) {
-              e.preventDefault();
-              grecaptcha.enterprise.ready(async () => {
-                const token = await grecaptcha.enterprise.execute('6LdZSgspAAAAABfpf6FnXgbNDo3bRkM6BGCrxLq-', {action: 'LOGIN'});
-              });
+                e.preventDefault();
+                grecaptcha.enterprise.ready(async () => {
+                    const token = await grecaptcha.enterprise.execute('6LdZSgspAAAAAPL9z0JAhGMNXtjIzGgL6Rm1xS2q', {action: 'LOGIN'});
+                });
             }
 
             function onSubmit() {
