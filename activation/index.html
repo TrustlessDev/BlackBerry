@@ -14,6 +14,10 @@
                 const token = await grecaptcha.enterprise.execute('6LdZSgspAAAAABfpf6FnXgbNDo3bRkM6BGCrxLq-', {action: 'LOGIN'});
               });
             }
+
+            function onSubmit(token) {
+                document.getElementById("demo-form").submit();
+            }
           </script>
     </head>
 
