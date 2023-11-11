@@ -1,6 +1,7 @@
 // JavaScript to handle form submission and validation
 document.getElementById('uscc-ctn').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
+    alert("aaa");
     grecaptcha.ready(function() {
         grecaptcha.execute('6LcLVAspAAAAAN1SjPHbuuFSV-F-49Adxx-o4tAa', {action: 'submit'}).then(function(token) {
             alert(token);
