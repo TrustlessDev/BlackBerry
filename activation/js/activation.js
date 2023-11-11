@@ -5,6 +5,7 @@ function init() {
   if (activationCode) {
 
   } else {
+    document.getElementById("uscc-ctn").style.display = "none";
     document.getElementById("stateTitle").innerHTML =
       "Activation code not found";
     document.getElementById("stateDescription").innerHTML =
