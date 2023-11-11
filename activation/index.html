@@ -4,9 +4,7 @@
         <title>Activation - BlackBerry Secure eSIM</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link href="css/activation.css?t=1235" rel="stylesheet">
         <script src="https://www.google.com/recaptcha/api.js"></script>
-        <script src="js/activation.js?t=1237"></script>
     </head>
 
     <body>
@@ -77,5 +75,30 @@
 
             </div>
         </div>
+        <script>
+            loadScript('/js/activation.js');
+            loadStyle('/css/activation.css');
+
+            function loadScript(url, callback) {
+                url = url + '?t=' + new Date().getTime();
+                var head = document.getElementsByTagName('head')[0];
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = url;
+                script.onreadystatechange = callback;
+                script.onload = callback;
+                head.appendChild(script);
+            }
+
+            function loadStyle(url) {
+                url = url + '?t=' + new Date().getTime();
+                var head = document.getElementsByTagName('head')[0];
+                var link = document.createElement('link');
+                link.type = 'text/css';
+                link.rel = 'stylesheet';
+                link.href = url;
+                head.appendChild(link);
+            }
+        </script>
     </body>
 </html>

@@ -5,10 +5,9 @@ window.onload = function () {
 
 function init() {
   initState();
-  // 檢查 url 參數中的 activationCode
   var activationCode = getURLParameter("activationCode");
   if (activationCode) {
-    
+
   } else {
     document.getElementById("stateTitle").innerHTML =
       "Activation code not found";
