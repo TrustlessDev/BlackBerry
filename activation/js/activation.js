@@ -65,7 +65,7 @@ document.getElementById('uscc-ctn').addEventListener('submit', async (event) => 
     
   if (window.innerWidth > 768) {
       var iframe = document.createElement('iframe');
-      iframe.src = "https://fast.wistia.net/embed/iframe/im4vye676u?videoFoam=true";
+      iframe.src = "https://www.youtube.com/watch?v=g5j7ILjx-BI";
       iframe.title = "UScellular+Marq Activation Page Video";
       iframe.allow = "autoplay; fullscreen";
       iframe.allowTransparency = "true";
