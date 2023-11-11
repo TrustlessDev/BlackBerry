@@ -65,12 +65,9 @@ document.getElementById('uscc-ctn').addEventListener('submit', async (event) => 
     
   if (window.innerWidth > 768) {
       var iframe = document.createElement('iframe');
-      iframe.src = "https://www.youtube.com/watch?v=g5j7ILjx-BI";
-      iframe.title = "UScellular+Marq Activation Page Video";
-      iframe.allow = "autoplay; fullscreen";
-      iframe.allowTransparency = "true";
-      iframe.frameBorder = "0";
-      iframe.scrolling = "no";
+      iframe.src = "https://www.youtube.com/embed/g5j7ILjx-BI?si=ky8xiUzMRQyl-KMv";
+      iframe.title = "How to activate an eSIM on your iPhone";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
       iframe.className = "wistia_embed";
       iframe.name = "wistia_embed";
       iframe.msAllowFullScreen = true;
