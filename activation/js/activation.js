@@ -95,12 +95,11 @@ function activateState() {
 }
 
 function successState() {
-  
   document.getElementById("loader-container").style.display = "";
   document
     .getElementsByClassName("circle-loader")[0]
     .classList.toggle("load-complete");
-  document.getElementsByClassName("checkmark")[0].style.display = "";
+  document.getElementsByClassName("checkmark")[0].style.display = "block";
 }
 
 function hideState() {
