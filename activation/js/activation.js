@@ -110,7 +110,7 @@ async function activateState() {
         "Save your eSIM QR code and scan it on your phone to activate your eSIM.";
         //load static qr code
         document.getElementById("uscc-ctn").style.display = "flex";
-        document.getElementById("uscc-ctn").innerHTML = '<img src="img/default.png" alt="eSIM Profile" width="60%" height="60%">';
+        document.getElementById("uscc-ctn").innerHTML = '<img src="img/default.png" alt="eSIM Profile" width="60%">';
     } else {
       document.getElementById("stateTitle").style.color = "#ff0000";
       document.getElementById("stateTitle").innerHTML = result.error.title;
