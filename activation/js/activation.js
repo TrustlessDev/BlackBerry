@@ -96,18 +96,18 @@ function activateState() {
 
 function successState() {
   document.getElementById("loader-container").style.display = "";
-  document
-    .getElementsByClassName("circle-loader")[0]
-    .classList.toggle("load-complete");
+  document.getElementsByClassName("circle-loader")[0].classList.add("load-complete");
   document.getElementsByClassName("checkmark")[0].style.display = "block";
 }
 
 function hideState() {
+  document.getElementsByClassName("circle-loader")[0].classList.remove("load-complete");
   document.getElementsByClassName("checkmark")[0].style.display = "none";
   document.getElementById("loader-container").style.display = "none";
 }
 
 function checkState() {
+  document.getElementsByClassName("circle-loader")[0].classList.remove("load-complete");
   document.getElementsByClassName("checkmark")[0].style.display = "none";
   document.getElementById("loader-container").style.display = "";
 }
