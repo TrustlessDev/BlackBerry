@@ -1,4 +1,3 @@
-	
 // JavaScript to handle form submission and validation
 document.getElementById('uscc-ctn').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
