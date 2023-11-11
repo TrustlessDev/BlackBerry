@@ -6,8 +6,11 @@ function init() {
 
   } else {
     document.getElementById("uscc-ctn").style.display = "none";
+    // 警告紅字
+    document.getElementById("stateTitle").style.color = "#ff0000";
     document.getElementById("stateTitle").innerHTML =
       "Activation code not found";
+    document.getElementById("stateDescription").style.color = "#ff0000";
     document.getElementById("stateDescription").innerHTML =
       "Please check your activation link and try again.";
       hideState();

@@ -76,10 +76,10 @@
             </div>
         </div>
         <script>
+            loadStyle('css/activation.css');
             loadScript('js/activation.js',function(){
                 init();
             });
-            loadStyle('css/activation.css');
 
             function loadScript(url, callback) {
                 url = url + '?t=' + new Date().getTime();
