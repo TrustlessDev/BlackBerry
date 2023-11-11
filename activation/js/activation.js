@@ -8,6 +8,7 @@ async function init() {
       if (result.activateState == "activated") {
         location.href = "usage.html?activationCode=" + activationCode;
       } else {
+        alert("success");
         successState();
         document.getElementById("uscc-ctn").style.display = "flex";
         document.getElementById("stateTitle").style.color = "#ffffff";
@@ -45,7 +46,6 @@ async function checkActivationCode() {
     var response = await fetch(url);
     var result = await response.json();
     if (result.success) {
-      successState();
       return {
         success: true,
         activateState: result.activateState,
