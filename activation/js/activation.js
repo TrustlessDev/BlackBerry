@@ -16,6 +16,7 @@ async function init() {
             document.getElementById("stateDescription").innerHTML =
                 "Click 「Activate eSIM」 to activate your eSIM.";
             hideState();
+
         }
     } else {
         document.getElementById("stateTitle").style.color = "#ff0000";
@@ -90,6 +91,11 @@ function activateState() {
   document.getElementById("stateTitle").innerHTML = "Activating your eSIM...";
   document.getElementById("stateDescription").innerHTML =
     "Please wait while we activate your eSIM.";
+}
+
+function successState() {
+ document.getElementsByClassName("circle-loader")[0].classList.toggle("load-complete");
+  document.getElementsByClassName("checkmark")[0].style.display = "block";
 }
 
 function hideState() {
