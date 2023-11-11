@@ -1,12 +1,31 @@
 
-function init() {
+async function init() {
   initState();
+  document.getElementById("uscc-ctn").style.display = "none";
   var activationCode = getURLParameter("activationCode");
   if (activationCode) {
-
+    let result = await checkActivationCode();
+    if (result.success) {
+        if(result.activateState == "activated") {
+            location.href = "usage.html?activationCode=" + activationCode;
+        } else {
+            document.getElementById("uscc-ctn").style.display = "flex";
+            document.getElementById("stateTitle").style.color = "#000000";
+            document.getElementById("stateTitle").innerHTML = "Activate your Secure eSIM";
+            document.getElementById("stateDescription").style.color = "#000000";
+            document.getElementById("stateDescription").innerHTML =
+                "Click 「Activate eSIM」 to activate your eSIM.";
+            hideState();
+        }
+    } else {
+        document.getElementById("stateTitle").style.color = "#ff0000";
+        document.getElementById("stateTitle").innerHTML = result.error.title;
+        document.getElementById("stateDescription").style.color = "#ff0000";
+        document.getElementById("stateDescription").innerHTML =
+            result.error.description;
+            hideState();
+    }
   } else {
-    document.getElementById("uscc-ctn").style.display = "none";
-    // 警告紅字
     document.getElementById("stateTitle").style.color = "#ff0000";
     document.getElementById("stateTitle").innerHTML =
       "Activation code not found";
@@ -15,6 +34,35 @@ function init() {
       "Please check your activation link and try again.";
       hideState();
   }
+}
+
+async function checkActivationCode() {
+    // 呼叫API
+    var activationCode = getURLParameter("activationCode");
+    var url = "https://esim.d8.run/checkActivationCode?activationCode=" + activationCode;
+    try {
+        var response = await fetch(url);
+        var result = await response.json();
+        if (result.success) {
+
+        } else {
+            return {
+                success: false,
+                error: {
+                    title: result.error.title,
+                    description: result.error.description
+                }
+            }
+        }
+    } catch(e) {
+        return {
+            success: false,
+            error: {
+                title: "Error",
+                description: "Please try again later."
+            }
+        }
+    }
 }
 
 function onSubmit() {
