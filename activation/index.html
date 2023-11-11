@@ -76,7 +76,9 @@
             </div>
         </div>
         <script>
-            loadScript('js/activation.js');
+            loadScript('js/activation.js',function(){
+                init();
+            });
             loadStyle('css/activation.css');
 
             function loadScript(url, callback) {

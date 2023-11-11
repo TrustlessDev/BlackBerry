@@ -1,7 +1,3 @@
-// 畫面載入時執行
-window.onload = function () {
-  init();
-};
 
 function init() {
   initState();
