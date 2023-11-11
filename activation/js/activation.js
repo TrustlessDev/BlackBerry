@@ -44,6 +44,7 @@ async function checkActivationCode() {
   try {
     var response = await fetch(url);
     var result = await response.json();
+    initState();
     if (result.success) {
       return {
         success: true,
