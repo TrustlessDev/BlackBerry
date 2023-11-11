@@ -1,13 +1,11 @@
-// JavaScript to handle form submission and validation
-document.getElementById('uscc-ctn').addEventListener('submit', async (event) => {
-    event.preventDefault(); // Prevent default form submission behavior
-    alert("aaa");
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6LcLVAspAAAAAN1SjPHbuuFSV-F-49Adxx-o4tAa', {action: 'submit'}).then(function(token) {
-            alert(token);
-        });
-    });
-  });
+  function onSubmit() {
+    var response = grecaptcha.getResponse();
+    if(response.length == 0) { 
+        alert("Please verify that you are not a robot.");
+    } else {
+        alert("Thank you for your submission.")
+    }
+  }
   
   function getURLParameter(name) {
       return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
