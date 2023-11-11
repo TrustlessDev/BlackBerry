@@ -101,7 +101,17 @@ async function activateState() {
     var result = await response.json();
     if (result.success) {
       successState();
-      location.href = "usage.html?activationCode=" + activationCode;
+      document.getElementById("uscc-ctn").style.display = "flex";
+      document.getElementById("stateTitle").style.color = "#ffffff";
+      document.getElementById("stateTitle").innerHTML =
+        "Active successfully";
+      document.getElementById("stateDescription").style.color = "#ffffff";
+      document.getElementById("stateDescription").innerHTML =
+        "Save your eSIM QR code and scan it on your phone to activate your eSIM.";
+        //load static qr code
+        document.getElementById("uscc-ctn").style.display = "flex";
+        document.getElementById("uscc-ctn").innerHTML = '<img src="img/default.png" alt="eSIM Profile" width="100%" height="100%">';
+      //document.getElementById("uscc-ctn").innerHTML = 
     } else {
       document.getElementById("stateTitle").style.color = "#ff0000";
       document.getElementById("stateTitle").innerHTML = result.error.title;
