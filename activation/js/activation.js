@@ -103,10 +103,12 @@ function successState() {
 }
 
 function hideState() {
+  document.getElementsByClassName("checkmark")[0].style.display = "none";
   document.getElementById("loader-container").style.display = "none";
 }
 
 function checkState() {
+  document.getElementsByClassName("checkmark")[0].style.display = "none";
   document.getElementById("loader-container").style.display = "";
 }
 
