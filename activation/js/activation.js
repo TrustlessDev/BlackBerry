@@ -2,7 +2,7 @@
 document.getElementById('uscc-ctn').addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
     grecaptcha.ready(function() {
-        grecaptcha.execute('6LePwQspAAAAAEacgyVDupWz-Vhs6rzxmhC7ZJAI', {action: 'submit'}).then(function(token) {
+        grecaptcha.execute('6LcLVAspAAAAAN1SjPHbuuFSV-F-49Adxx-o4tAa', {action: 'submit'}).then(function(token) {
             alert(token);
         });
     });
