@@ -1,4 +1,3 @@
-
 async function init() {
   initState();
   document.getElementById("uscc-ctn").style.display = "none";
@@ -6,25 +5,25 @@ async function init() {
   if (activationCode) {
     let result = await checkActivationCode();
     if (result.success) {
-        if(result.activateState == "activated") {
-            location.href = "usage.html?activationCode=" + activationCode;
-        } else {
-            document.getElementById("uscc-ctn").style.display = "flex";
-            document.getElementById("stateTitle").style.color = "#ffffff";
-            document.getElementById("stateTitle").innerHTML = "Activate your Secure eSIM";
-            document.getElementById("stateDescription").style.color = "#ffffff";
-            document.getElementById("stateDescription").innerHTML =
-                "Click 「Activate eSIM」 to activate your eSIM.";
-            hideState();
-
-        }
-    } else {
-        document.getElementById("stateTitle").style.color = "#ff0000";
-        document.getElementById("stateTitle").innerHTML = result.error.title;
-        document.getElementById("stateDescription").style.color = "#ff0000";
+      if (result.activateState == "activated") {
+        location.href = "usage.html?activationCode=" + activationCode;
+      } else {
+        document.getElementById("uscc-ctn").style.display = "flex";
+        document.getElementById("stateTitle").style.color = "#ffffff";
+        document.getElementById("stateTitle").innerHTML =
+          "Activate your Secure eSIM";
+        document.getElementById("stateDescription").style.color = "#ffffff";
         document.getElementById("stateDescription").innerHTML =
-            result.error.description;
-            hideState();
+          "Click 「Activate eSIM」 to activate your eSIM.";
+        hideState();
+      }
+    } else {
+      document.getElementById("stateTitle").style.color = "#ff0000";
+      document.getElementById("stateTitle").innerHTML = result.error.title;
+      document.getElementById("stateDescription").style.color = "#ff0000";
+      document.getElementById("stateDescription").innerHTML =
+        result.error.description;
+      hideState();
     }
   } else {
     document.getElementById("stateTitle").style.color = "#ff0000";
@@ -33,40 +32,42 @@ async function init() {
     document.getElementById("stateDescription").style.color = "#ff0000";
     document.getElementById("stateDescription").innerHTML =
       "Please check your activation link and try again.";
-      hideState();
+    hideState();
   }
 }
 
 async function checkActivationCode() {
-    // 呼叫API
-    var activationCode = getURLParameter("activationCode");
-    var url = "https://esim.d8.run/checkActivationCode?activationCode=" + activationCode;
-    try {
-        var response = await fetch(url);
-        var result = await response.json();
-        if (result.success) {
-            return {
-                success: true,
-                activateState: result.activateState
-            }
-        } else {
-            return {
-                success: false,
-                error: {
-                    title: result.error.title,
-                    description: result.error.description
-                }
-            }
-        }
-    } catch(e) {
-        return {
-            success: false,
-            error: {
-                title: "Error",
-                description: "Please try again later."
-            }
-        }
+  // 呼叫API
+  var activationCode = getURLParameter("activationCode");
+  var url =
+    "https://esim.d8.run/checkActivationCode?activationCode=" + activationCode;
+  try {
+    var response = await fetch(url);
+    var result = await response.json();
+    if (result.success) {
+      successState();
+      return {
+        success: true,
+        activateState: result.activateState,
+      };
+    } else {
+      return {
+        success: false,
+        error: {
+          title: result.error.title,
+          description: result.error.description,
+        },
+      };
     }
+  } catch (e) {
+    return {
+      success: false,
+      error: {
+        title: "Error",
+        description: "Please try again later.",
+      },
+    };
+  }
 }
 
 function onSubmit() {
@@ -94,7 +95,10 @@ function activateState() {
 }
 
 function successState() {
- document.getElementsByClassName("circle-loader")[0].classList.toggle("load-complete");
+  document.getElementById("loader-container").style.display = "";
+  document
+    .getElementsByClassName("circle-loader")[0]
+    .classList.toggle("load-complete");
   document.getElementsByClassName("checkmark")[0].style.display = "block";
 }
 
