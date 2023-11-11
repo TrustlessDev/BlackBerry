@@ -1,0 +1,272 @@
+header {
+	display:none!important;
+}
+
+@media (max-width: 768px) {
+  .right-side {
+    display: none!important;
+  }
+	
+	.leftcontain {
+  align-items: top;
+}
+
+}
+
+.leftheader {
+	margin-bottom:50px;
+	text-align:center;
+}
+
+.pagecontent {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+} 
+
+#videoContainer {
+  width: calc(100% + 14px);
+  position:relative;
+  max-width:600px;
+   padding-top: 57.75%; 
+  overflow:hidden;
+  background-color:#605FF0;
+  border-radius:8px;
+	background-image: url(/wp-content/uploads/2023/06/Blank-Project-32.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 14px);
+  height: 100%;
+}
+
+.rightcontain {
+  max-width:500px;
+  width:100%;
+}
+
+.videohead {
+    text-align: center;
+  margin-top:-32px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom:16px;
+  max-width:400px;
+}
+
+	.activateform {
+		width:100%;
+		
+	}
+	
+	.emailField {
+		box-sizing: border-box;
+		height: 48px;
+		left: 40px;
+		right: 456px;
+		margin:0px!important;
+		width: 100%;
+		/* White */
+		background: #FFFFFF;
+		/* @cool-grey-40
+
+		Darkest grey for backgrounds and maximum contrast
+		*/
+		border: 1px solid #979EA8;
+		border-radius:10px;
+		padding-left: 10px;
+
+	}
+	.btnSubmit {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 0px 16px;
+		gap: 4px;
+		/* Growth/Primary-Base */
+		width: 100%;
+		background: #00A3A0!important;
+		border: 1px solid #FFFFFF!important;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+border-radius: 10px!important;
+		color: #fff;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		margin-top:16px;
+	}
+	.reginfolink {
+		color:#ffffff;
+		text-decoration:underline;
+	}
+	
+	
+	.reginfo, .ccinfo {
+		margin-top:8px;
+		text-align:center;
+	}
+	
+	.ccinfo {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  text-align: center;
+		justify-content: center;
+    color:#EF5556;
+}
+
+.leftcontain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+	max-width:600px!important;
+	padding:20px;
+	margin:0 auto;
+}
+
+label {
+  text-align:left;
+}
+
+	
+.ccinfo::before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg class='svg-icon' style='width: 1em; height: 1em; vertical-align: middle; fill: %23FFFFFF; overflow: hidden;' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M510.201081 921.627676C289.570595 921.627676 110.702703 742.787459 110.702703 522.129297c0-220.630486 178.867892-399.470703 399.498378-399.470702s399.470703 178.840216 399.470703 399.470702c0 220.658162-178.840216 399.498378-399.470703 399.498379z m-50.092973-256.332108c7.804541 0 15.609081-2.988973 21.780757-8.717838l215.593513-216.506811a31.273514 31.273514 0 0 0 0-43.810595 30.581622 30.581622 0 0 0-43.561513 0l-193.812757 194.476973-101.376-101.846486a30.581622 30.581622 0 0 0-43.561513 0 31.273514 31.273514 0 0 0 0 43.83827l123.156756 123.599568c5.95027 5.977946 13.976216 8.966919 21.780757 8.966919z' fill='%23EF5556' /%3E%3C/svg%3E");
+  display: inline-block;
+  margin-right: 5px; /* Adjust the spacing as needed */
+  width: 1em; /* Adjust the width of the SVG icon */
+  height: 1em; /* Adjust the height of the SVG icon */
+}
+
+	
+	
+	.btnSubmit:hover {
+cursor:pointer;
+		background: #c8e9e9!important;
+		color: #00A3A0!important;
+		border: 1px solid #00A3A0!important;
+	}
+
+.error-message {
+  display: block;
+  color: #fff!important;;
+  background-color: red;
+  padding: 6px 16px;
+  border-radius: 10px;
+	margin-top:8px;
+}
+
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+	min-height:100vh;
+}
+
+.left-side {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-image: url(https://19908047.fs1.hubspotusercontent-na1.net/hubfs/19908047/Untitled.png);
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: #151515;
+    color: white;
+    padding: 20px;
+}
+
+.right-side {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: white;
+    padding: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+video {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .right-side {
+        display: none;
+    }
+}
+
+
+.logo-container {
+  display: flex;
+  max-width:350px;
+  margin-top:50px;
+  margin-left:auto;
+  margin-right:auto;
+  align-items: center; /* This will vertically center the logos and the divider */
+  justify-content: space-around; /* This will put equal space around each item */
+}
+
+.logo {
+  width: auto; /* This will maintain the aspect ratio of the logos */
+  height: 30px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.logoinfo {
+  text-align:center;
+  font-size:16px;
+  margin:0;
+}
+
+.divider {
+  height: 30px;
+  width: 1px; 
+  background-color: #fff; 
+}
+
+.videowrap {
+  position:relative;
+}
+.videoaccent {
+  position:absolute;
+  right:-60px;
+  width:50px;
+  bottom:-50px;
+} 
