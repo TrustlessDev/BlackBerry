@@ -8,7 +8,6 @@ async function init() {
       if (result.activateState == "activated") {
         location.href = "usage.html?activationCode=" + activationCode;
       } else {
-        alert("success");
         successState();
         document.getElementById("uscc-ctn").style.display = "flex";
         document.getElementById("stateTitle").style.color = "#ffffff";
