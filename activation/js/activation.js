@@ -111,7 +111,6 @@ async function activateState() {
         //load static qr code
         document.getElementById("uscc-ctn").style.display = "flex";
         document.getElementById("uscc-ctn").innerHTML = '<img src="img/default.png" alt="eSIM Profile" width="100%" height="100%">';
-      //document.getElementById("uscc-ctn").innerHTML = 
     } else {
       document.getElementById("stateTitle").style.color = "#ff0000";
       document.getElementById("stateTitle").innerHTML = result.error.title;
