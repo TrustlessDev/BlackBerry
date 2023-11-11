@@ -87,11 +87,36 @@ function initState() {
     "Please wait while we check your eSim status.";
 }
 
-function activateState() {
+async function activateState() {
   checkState();
   document.getElementById("stateTitle").innerHTML = "Activating your eSIM...";
   document.getElementById("stateDescription").innerHTML =
     "Please wait while we activate your eSIM.";
+  // 執行啟用
+  var activationCode = getURLParameter("activationCode");
+  var url =
+    "https://esim.d8.run/activate?activationCode=" + activationCode;
+  try {
+    var response = await fetch(url);
+    var result = await response.json();
+    if (result.success) {
+      successState();
+      location.href = "usage.html?activationCode=" + activationCode;
+    } else {
+      document.getElementById("stateTitle").style.color = "#ff0000";
+      document.getElementById("stateTitle").innerHTML = result.error.title;
+      document.getElementById("stateDescription").style.color = "#ff0000";
+      document.getElementById("stateDescription").innerHTML =
+        result.error.description;
+      hideState();
+    }
+  } catch (e) {
+    document.getElementById("stateTitle").style.color = "#ff0000";
+      document.getElementById("stateTitle").innerHTML = "Activation failed";
+      document.getElementById("stateDescription").style.color = "#ff0000";
+      document.getElementById("stateDescription").innerHTML = "Please try again later."
+      hideState();
+  }
 }
 
 function successState() {
