@@ -24,6 +24,9 @@
                             <p style="font-size:18px;margin-top:8px;">Click 「Activate eSIM」 to activate your eSIM.</p>
                         </div>
                         <form class="activateform" id="uscc-ctn" method="post" style="display: flex;flex-direction: column;">
+                            <div id="loader-container" class="circle-loader" style="display: none">
+                                <div class="checkmark draw"></div>
+                              </div>
                             <button id="uscc-ctn" class="btnSubmit g-recaptcha" data-sitekey="6LcLVAspAAAAAN1SjPHbuuFSV-F-49Adxx-o4tAa" data-callback='onSubmit' data-action='submit' style="font-weight: 700;font-size: 18px;line-height: 36px;">Activate eSIM</button>
                             <div id="server-error" style="display: none; color: red;"></div>
                             <p class="ccinfo">Promo applied: Get PRO </p>

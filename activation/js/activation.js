@@ -3,7 +3,7 @@
     if(response.length == 0) { 
         alert("Please verify that you are not a robot.");
     } else {
-        alert("Thank you for your submission.")
+        document.getElementById("loader-container").style.display = "";
     }
   }
   
