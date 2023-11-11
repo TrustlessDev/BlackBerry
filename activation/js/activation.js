@@ -8,6 +8,7 @@ async function init() {
       if (result.activateState == "activated") {
         location.href = "usage.html?activationCode=" + activationCode;
       } else {
+        successState();
         document.getElementById("uscc-ctn").style.display = "flex";
         document.getElementById("stateTitle").style.color = "#ffffff";
         document.getElementById("stateTitle").innerHTML =
@@ -15,7 +16,6 @@ async function init() {
         document.getElementById("stateDescription").style.color = "#ffffff";
         document.getElementById("stateDescription").innerHTML =
           "Click 「Activate eSIM」 to activate your eSIM.";
-        hideState();
       }
     } else {
       document.getElementById("stateTitle").style.color = "#ff0000";
@@ -95,6 +95,7 @@ function activateState() {
 }
 
 function successState() {
+  
   document.getElementById("loader-container").style.display = "";
   document
     .getElementsByClassName("circle-loader")[0]
