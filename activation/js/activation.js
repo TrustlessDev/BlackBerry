@@ -10,9 +10,9 @@ async function init() {
             location.href = "usage.html?activationCode=" + activationCode;
         } else {
             document.getElementById("uscc-ctn").style.display = "flex";
-            document.getElementById("stateTitle").style.color = "#000000";
+            document.getElementById("stateTitle").style.color = "#ffffff";
             document.getElementById("stateTitle").innerHTML = "Activate your Secure eSIM";
-            document.getElementById("stateDescription").style.color = "#000000";
+            document.getElementById("stateDescription").style.color = "#ffffff";
             document.getElementById("stateDescription").innerHTML =
                 "Click 「Activate eSIM」 to activate your eSIM.";
             hideState();
@@ -43,7 +43,6 @@ async function checkActivationCode() {
     try {
         var response = await fetch(url);
         var result = await response.json();
-        console.log(result);
         if (result.success) {
             return {
                 success: true,
