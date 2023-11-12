@@ -10,7 +10,7 @@
     <div class="header">
         <img width="320" style="margin-top: -180px;" src="img/blackberry-logo.webp">
         <div class="infinite">eSIM Setup Tutorial</div>
-        <a href="#start_block"><img class="arrow-down" width="96" src="img/arrow-down.gif"></a>
+        <a class="arrow-down" href="#start_block"><img width="96" src="img/arrow-down.gif"></a>
     </div>
     <div id="start_block" class="content content_white">
         <div class="maxwidth">
@@ -119,6 +119,17 @@
             <b>© 2023 BlackBerry Limited. All rights reserved.</b>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
