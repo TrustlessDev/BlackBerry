@@ -93,7 +93,7 @@ async function activateState() {
   document.getElementById("stateDescription").innerHTML =
     "Please wait while we activate your eSIM.";
   // 執行啟用
-  var activationCode = getURLParameter("activationCode");Scan
+  var activationCode = getURLParameter("activationCode");
   var url =
     "https://esim.d8.run/activate?activationCode=" + activationCode;
   try {
