@@ -289,6 +289,11 @@ body {
   }
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
