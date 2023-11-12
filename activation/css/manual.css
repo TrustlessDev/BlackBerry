@@ -3,7 +3,8 @@
   position: relative;
 }
 
-html, body {
+html,
+body {
   padding: 0px;
   margin: 0px;
   font-family: "Fjalla One", sans-serif, 微軟正黑體;
@@ -12,6 +13,9 @@ html, body {
 .header {
   height: 100vh;
   background-color: #5096e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header .circle {
   position: absolute;
@@ -60,7 +64,8 @@ html, body {
 .content .brand_chip {
   margin-bottom: 25px;
 }
-.content .brand_block, .content .brand_tag {
+.content .brand_block,
+.content .brand_tag {
   display: inline-block;
   vertical-align: middle;
 }
@@ -197,7 +202,9 @@ html, body {
 .content_white .small_english {
   color: #5096e6;
 }
-.content_white h1, .content_white h2, .content_white h3 {
+.content_white h1,
+.content_white h2,
+.content_white h3 {
   font-weight: 500;
 }
 .content_white .color_block {
@@ -217,7 +224,9 @@ html, body {
 .content_grey .small_english {
   color: #5096e6;
 }
-.content_grey h1, .content_grey h2, .content_grey h3 {
+.content_grey h1,
+.content_grey h2,
+.content_grey h3 {
   font-weight: 500;
 }
 .content_grey .brand_block::before {
@@ -243,7 +252,9 @@ html, body {
 .content_blue .small_english {
   color: #333333;
 }
-.content_blue h1, .content_blue h2, .content_blue h3 {
+.content_blue h1,
+.content_blue h2,
+.content_blue h3 {
   font-weight: 500;
 }
 .content_blue .brand_block {
@@ -263,7 +274,8 @@ html, body {
 }
 
 @media screen and (max-width: 768px) {
-  .content .brand_block, .content .brand_tag {
+  .content .brand_block,
+  .content .brand_tag {
     display: block;
   }
   .content .brand_block {
