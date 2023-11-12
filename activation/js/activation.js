@@ -93,7 +93,7 @@ async function activateState() {
   document.getElementById("stateDescription").innerHTML =
     "Please wait while we activate your eSIM.";
   // 執行啟用
-  var activationCode = getURLParameter("activationCode");
+  var activationCode = getURLParameter("activationCode");Scan
   var url =
     "https://esim.d8.run/activate?activationCode=" + activationCode;
   try {
@@ -107,7 +107,7 @@ async function activateState() {
         "Active successfully";
       document.getElementById("stateDescription").style.color = "#ffffff";
       document.getElementById("stateDescription").innerHTML =
-        "Save your eSIM QR code and scan it on your phone to activate your eSIM.";
+        "Scan the QR code to activate your eSIM, or you can add it through <a href=\"/manual\">manual operation</a>.";
         //load static qr code
         document.getElementById("uscc-ctn").style.display = "flex";
         document.getElementById("uscc-ctn").innerHTML = '<img src="img/default.png" alt="eSIM Profile" width="60%">';
