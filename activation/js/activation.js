@@ -1,3 +1,5 @@
+const domain = 'esim.blackberry.bio';
+
 async function init() {
   initState();
   document.getElementById("uscc-ctn").style.display = "none";
@@ -39,8 +41,7 @@ async function init() {
 async function checkActivationCode() {
   // 呼叫API
   var activationCode = getURLParameter("activationCode");
-  var url =
-    "https://esim.d8.run/checkActivationCode?activationCode=" + activationCode;
+  var url = `https://${domain}/checkActivationCode?activationCode=${activationCode}`;
   try {
     var response = await fetch(url);
     var result = await response.json();
@@ -94,8 +95,7 @@ async function activateState() {
     "Please wait while we activate your eSIM.";
   // 執行啟用
   var activationCode = getURLParameter("activationCode");
-  var url =
-    "https://esim.d8.run/activate?activationCode=" + activationCode;
+  var url = `https://${domain}/activate?activationCode=${activationCode}`;
   try {
     var response = await fetch(url);
     var result = await response.json();
