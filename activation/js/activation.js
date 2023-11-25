@@ -3,6 +3,7 @@ const domain = 'esim.blackberry.bio';
 async function init() {
   initState();
   document.getElementById("uscc-ctn").style.display = "none";
+  
   var activationCode = getURLParameter("activationCode");
   if (activationCode) {
     let result = await checkActivationCode();
@@ -71,15 +72,6 @@ async function checkActivationCode() {
   }
 }
 
-function onSubmit() {
-  var response = grecaptcha.getResponse();
-  if (response.length == 0) {
-    alert("Please verify that you are not a robot.");
-  } else {
-    activateState();
-  }
-}
-
 function initState() {
   checkState();
   document.getElementById("stateTitle").innerHTML =
@@ -130,19 +122,13 @@ async function activateState() {
 
 function successState() {
   document.getElementById("loader-container").style.display = "";
-  document.getElementsByClassName("circle-loader")[0].classList.add("load-complete");
-  document.getElementsByClassName("checkmark")[0].style.display = "block";
 }
 
 function hideState() {
-  document.getElementsByClassName("circle-loader")[0].classList.remove("load-complete");
-  document.getElementsByClassName("checkmark")[0].style.display = "none";
   document.getElementById("loader-container").style.display = "none";
 }
 
 function checkState() {
-  document.getElementsByClassName("circle-loader")[0].classList.remove("load-complete");
-  document.getElementsByClassName("checkmark")[0].style.display = "none";
   document.getElementById("loader-container").style.display = "";
 }
 
